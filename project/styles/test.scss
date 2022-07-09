@@ -1,0 +1,6 @@
+body {
+    background-color: $color;
+    @include phone {
+        background-color: #ddd;
+    }
+}
