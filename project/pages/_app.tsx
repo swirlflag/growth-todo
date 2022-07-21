@@ -6,7 +6,9 @@ import { useCallback , useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import init from "@/core/init.ts";
-import { withRedux, action_UP, getQuizList} from "@/store/index.ts";
+import wrapper from "@/store/index.ts";
+import { requestQuizList } from "@/store/quiz.ts";
+import { COUNTER_UP } from "@/store/counter.ts";
 
 init();
 const render = (jsx: Function): JSX => {
@@ -21,9 +23,12 @@ const MyApp = ({ Component, pageProps, }: AppProps) => {
     const [inputv, setInputv] = useState(1);
 
     const upupClick = useCallback(() => {
-        dispatch(action_UP(inputv));
-        dispatch(getQuizList());
+        dispatch(COUNTER_UP(inputv));
     }, [count, inputv]);
+
+    const quiztest = useCallback(() => {
+        dispatch(requestQuizList());
+    }, []);
 
     return (
         <>
@@ -39,9 +44,12 @@ const MyApp = ({ Component, pageProps, }: AppProps) => {
                 hey
                 <button onClick={upupClick}>+++</button>
                 <p>{count}</p>
-                <input type="number" value={inputv} onChange={(e) => setInputv(parseInt(e.target.value))} />
+                <input type="number" value={inputv} onChange={(e) => setInputv(parseInt(e.target.value) || 0)} />
 
             </div>
+            <button onClick={quiztest}>
+                new quiz
+            </button>
             {
                 render(() => {
                     if (quizList_status.isLoading) {
@@ -73,4 +81,4 @@ const MyApp = ({ Component, pageProps, }: AppProps) => {
     );
 };
 
-export default withRedux(MyApp);
+export default wrapper.withRedux(MyApp);
