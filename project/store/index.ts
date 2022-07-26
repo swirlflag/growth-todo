@@ -26,5 +26,4 @@ const store = configureStore({
 
 const wrapper = createWrapper(() => store);
 
-console.log(counterSlice.actions.increase)
 export default wrapper;

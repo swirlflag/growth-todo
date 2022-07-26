@@ -11,7 +11,6 @@ const isProd = process.env.NODE_ENV === "production";
 const myConfig = {
     mode: isProd ? "production" : "development",
     devtool: isProd ? "hidden-source-map" : "eval",
-
     // reactStrictMode: true, // 초기 세팅에 이미 포함된 내용
     // swcMinify: true, // 코드 경량화 작업에 Terser가 아닌 SWC를 사용
 }

@@ -1,7 +1,38 @@
-$color: #d3d;
+$color: #aac;
 
-@mixin phone {
-    @media screen and (max-width : 720px){
-        @content;
-    }
+:root {
+	--color: brown;
+    --SIZE_BREAKPOINT_sx2: 320px;
+    --SIZE_BREAKPOINT_sx: 480px;
+    --SIZE_BREAKPOINT_sm: 576px;
+    --SIZE_BREAKPOINT_md: 768px;
+    --SIZE_BREAKPOINT_lg: 992px;
+    --SIZE_BREAKPOINT_lx: 1200px;
+    --SIZE_BREAKPOINT_lx2: 1400px;
+    --SIZE_BREAKPOINT_lx3: 1600px;
+}
+
+@mixin sx2 {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_sx2)) {@content;}
+}
+@mixin sx {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_sx)) {@content;}
+}
+@mixin sm {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_sm)) {@content;}
+}
+@mixin md {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_md)) {@content;}
+}
+@mixin lg {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_lg)) {@content;}
+}
+@mixin lx {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_lx)) {@content;}
+}
+@mixin lx2 {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_lx2)) {@content;}
+}
+@mixin lx3 {
+    @media screen and (max-width: var(--SIZE_BREAKPOINT_lx3)) {@content;}
 }

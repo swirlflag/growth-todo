@@ -53,7 +53,7 @@
 		"default-param-last": "off",
 		"arrow-body-style": "off",
 		"camelcase": "off",
-		"ignoreDuringBuilds": 0
-
+		"ignoreDuringBuilds": 0,
+        "dot-notation": "off" // .연산자
 	}
 }

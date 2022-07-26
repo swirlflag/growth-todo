@@ -1,5 +1,6 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript, } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import Nav from "@/components/template/Nav.tsx";
 
 class MyDocument extends Document {
     static async getInitialProps(context) {
@@ -32,8 +33,18 @@ class MyDocument extends Document {
                 <Head>
                 </Head>
                 <body>
-                    <Main>11..</Main>
-                    <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2Ces2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019%2Ces2020%2Ces2021%2Ces2022"/>
+                    <div id="app">
+                        <div id="plate--nav">
+                            <Nav/>
+                        </div>
+                        <div id="plate--modal">
+                            modal
+                        </div>
+                        <div id="plate--page">
+                            <Main></Main>
+                        </div>
+                    </div>
+                    {/* <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2Ces2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019%2Ces2020%2Ces2021%2Ces2022"/> */}
                     <NextScript/>
                 </body>
             </Html>
