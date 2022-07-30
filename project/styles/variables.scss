@@ -1,38 +1,56 @@
-$color: #aac;
+$SIZE_BREAKPOINT_sx2: 320px;
+$SIZE_BREAKPOINT_sx: 480px;
+$SIZE_BREAKPOINT_sm: 576px;
+$SIZE_BREAKPOINT_md: 768px;
+$SIZE_BREAKPOINT_lg: 992px;
+$SIZE_BREAKPOINT_lx: 1200px;
+$SIZE_BREAKPOINT_lx2: 1400px;
+$SIZE_BREAKPOINT_lx3: 1600px;
+
+$SIZE_PC_innerWidth: 1000px;
+$SIZE_PC_innerPadding: 20px;
+$SIZE_PC_font_standard: 16px;
+
+$SIZE_font_400: 1rem;
+$SIZE_font_500: 1.2rem;
 
 :root {
-	--color: brown;
-    --SIZE_BREAKPOINT_sx2: 320px;
-    --SIZE_BREAKPOINT_sx: 480px;
-    --SIZE_BREAKPOINT_sm: 576px;
-    --SIZE_BREAKPOINT_md: 768px;
-    --SIZE_BREAKPOINT_lg: 992px;
-    --SIZE_BREAKPOINT_lx: 1200px;
-    --SIZE_BREAKPOINT_lx2: 1400px;
-    --SIZE_BREAKPOINT_lx3: 1600px;
+    --SIZE_BREAKPOINT_sx2: $SIZE_BREAKPOINT_sx2;
+    --SIZE_BREAKPOINT_sx: $SIZE_BREAKPOINT_sx;
+    --SIZE_BREAKPOINT_sm: $SIZE_BREAKPOINT_sm;
+    --SIZE_BREAKPOINT_md: $SIZE_BREAKPOINT_md;
+    --SIZE_BREAKPOINT_lg: $SIZE_BREAKPOINT_lg;
+    --SIZE_BREAKPOINT_lx: $SIZE_BREAKPOINT_lx;
+    --SIZE_BREAKPOINT_lx2: $SIZE_BREAKPOINT_lx2;
+    --SIZE_BREAKPOINT_lx3: $SIZE_BREAKPOINT_lx3;
+    --SIZE_PC_innerWidth: $SIZE_PC_innerWidth;
+    --SIZE_PC_innerPadding: $SIZE_PC_innerPadding;
+    --SIZE_PC_font_standard: $SIZE_PC_font_standard;
+    --SIZE_font_400: $SIZE_font_400;
+    --SIZE_font_500: $SIZE_font_500;
 }
 
 @mixin sx2 {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_sx2)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_sx2) {@content;}
 }
 @mixin sx {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_sx)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_sx) {@content;}
 }
 @mixin sm {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_sm)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_sm) {@content;}
 }
 @mixin md {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_md)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_md) {@content;}
 }
 @mixin lg {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_lg)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_lg) {@content;}
 }
 @mixin lx {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_lx)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_lx) {@content;}
 }
 @mixin lx2 {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_lx2)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_lx2) {@content;}
 }
 @mixin lx3 {
-    @media screen and (max-width: var(--SIZE_BREAKPOINT_lx3)) {@content;}
+    @media screen and (max-width: $SIZE_BREAKPOINT_lx3) {@content;}
 }

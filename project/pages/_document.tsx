@@ -35,12 +35,12 @@ class MyDocument extends Document {
                 <body>
                     <div id="app">
                         <div id="plate--nav">
-                            <Nav/>
+                            {/* <Nav/> */}
                         </div>
                         <div id="plate--modal">
-                            modal
+                            {/* modal */}
                         </div>
-                        <div id="plate--page">
+                        <div id="plate--page" >
                             <Main></Main>
                         </div>
                     </div>

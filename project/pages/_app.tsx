@@ -1,5 +1,6 @@
-import "@/styles/test.scss";
+import "@/styles/reset.scss";
 import "@/styles/globals.scss";
+import "@/styles/test.scss";
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import type { AppProps } from "next/app";

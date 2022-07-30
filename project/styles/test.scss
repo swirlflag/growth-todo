@@ -1,7 +1,22 @@
+.page--home {
+    display: flex;
+}
 
-body {
-    background-color: $color;
-    @include sm {
-        background-color: #ddd;
+.tododay {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+    flex-direction: column;
+    // font-size: var(--SIZE_font_400);
+    .tododay__list {
+        display: flex;
+        flex-direction: column;
     }
+}
+
+
+
+.todoitem {
+    
 }
